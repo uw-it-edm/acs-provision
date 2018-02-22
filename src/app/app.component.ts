@@ -5,6 +5,7 @@ import {User} from './user/shared/user';
 import {Observable} from 'rxjs/Observable';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {SyncService} from './user/shared/sync.service';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import {SyncService} from './user/shared/sync.service';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  supportEmail = environment.supportEmail;
   user: User;
   user$: Observable<User>;
 
@@ -52,9 +54,13 @@ export class AppComponent implements OnInit {
         this.result = result;
         this.loading = false;
         if (result) {
-          
+
         }
+      }, (syncError) => {
+        this.result = false;
       });
+    }, (userError) => {
+      this.result = false;
     });
   }
 }

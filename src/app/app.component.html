@@ -3,20 +3,29 @@
     <div class="cs-main">
       <mat-card class="cs-card">
         <mat-card-content>
-          <h2 class="cs-subtitle">We're setting things up</h2>
-          <p>
-            This might be the first time that you're trying
-            to access the University's Content Management system.
-            We are provisioning an account for you and getting
-            it set up with the appropriate permissions.
-          </p>
-          <div class="cs-loading">
-            <p *ngIf="loading">
-              <mat-spinner></mat-spinner>
+          <div *ngIf="loading">
+            <h2 class="cs-subtitle">We're setting things up</h2>
+            <p>
+              This might be the first time that you're trying
+              to access the University's Content Management system.
+              We are provisioning an account for you and getting
+              it set up with the appropriate permissions.
             </p>
-            <h1 *ngIf="result"><mat-icon class="cs-takeoff">flight_takeoff</mat-icon></h1>
+            <div class="cs-loading">
+              <p *ngIf="loading">
+                <mat-spinner></mat-spinner>
+              </p>
+              <h1 *ngIf="result"><mat-icon class="cs-takeoff">flight_takeoff</mat-icon></h1>
+            </div>
           </div>
-          <p class="cs-spacer">&nbsp;</p>
+          <div *ngIf="!result">
+            <h2 class="cs-subtitle">Something went wrong...</h2>
+            <p>
+              It looks like we were not able to set things up fully. Please
+              contact {{supportEmail}} and let them know that you're going
+              to need some help.
+            </p>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
