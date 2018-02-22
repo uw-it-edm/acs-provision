@@ -14,6 +14,8 @@ import {environment} from '../environments/environment';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+
+  applicationUrl = environment.applicationUrl;
   supportEmail = environment.supportEmail;
   user: User;
   user$: Observable<User>;

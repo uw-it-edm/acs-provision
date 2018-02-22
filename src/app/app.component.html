@@ -19,6 +19,14 @@
             </div>
           </div>
           <div *ngIf="!result">
+            <h2 class="cs-subtitle">You should be all set</h2>
+            <p>
+              Try going to <a href="{{applicationUrl}}">Alfresco Share</a> to see if it worked; if
+              you end up back here, you may want to contact {{supportEmail}} and let them know
+              that you're going to need some help.
+            </p>
+          </div>
+          <div *ngIf="!result">
             <h2 class="cs-subtitle">Something went wrong...</h2>
             <p>
               It looks like we were not able to set things up fully. Please
