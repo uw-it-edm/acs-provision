@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+    background-color: #4b2e83;
+}
+
+.cs-brand {
+    bottom: 30px;
+    position: fixed;
+    right: 10px;
+    width: 100px;
+}
+
+.cs-card {
+    background-color: white;
+    height: 350px;
+    margin: auto;
+    top: 120px;
+    width: 460px;
+}
+
+.cs-loading {
+    margin: 20px auto;
+    text-align: center;
+    width: 120px;
+}
+
+.cs-spacer {
+    height: 30px;
+}
+
+.cs-subtitle {
+    clear: left;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.cs-takeoff {
+    font-size: 18pt;
+}
