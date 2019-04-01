@@ -1,3 +1,5 @@
+# DEPRECATED - This project is deprecated and no longer maintained
+
 # AcsUserLogin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
